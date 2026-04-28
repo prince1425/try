@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-=+g*g6+0vth@iu*)3m4xu#9d$_)a^fb5v8$8y%b^+uqc&p1i%u
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS=[""]
+ALLOWED_HOSTS=["*"]
 CSRF_TRUSTED_ORIGINS = ['https://*.cognitiveclass.ai']
 
 
@@ -120,6 +120,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
